@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">inicio</string>
+    <string name="open_nav_drawer">Abrir</string>
+    <string name="close_nav_drawer">Cerrar</string>
+    <string name="inicio_boton">Emparejamiento</string>
+    <string name="inicio_region">Región</string>
+    <string name="inicio_juego">Juego</string>
+    <string name="inicio_edad">Edad</string>
+    <string name="inicio_rango">Rango/lv</string>
+</resources>
