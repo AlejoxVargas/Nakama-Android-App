@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Nakama-Android-App</string>
+    <string name="username">username</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
 </resources>
