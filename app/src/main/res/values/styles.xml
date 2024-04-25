@@ -2,10 +2,9 @@
 <resources>
 
     <style name="roundedImageViewRounded">
-    <item name="cornerFamily">rounded</item>
-    <item name="cornerSize">50%</item>
-
-</style>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 
     <style name="CustomEditTextStyle" parent="@android:style/Widget.EditText">
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -15,9 +14,9 @@
     </style>
 
 
-    <style name="loginFont" parent="@style/CustomEditTextStyle">  <item name="android:fontFamily">sans-serif-medium</item>
-</style>
-
+    <style name="loginFont" parent="@style/CustomEditTextStyle">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 
 </resources>
 
