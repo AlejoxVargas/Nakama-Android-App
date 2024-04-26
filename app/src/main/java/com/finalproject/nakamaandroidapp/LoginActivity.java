@@ -8,9 +8,6 @@ import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,9 +23,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         botonRegistrarse = findViewById(R.id.boton_registrarse);
-        botonIniciarSesion = findViewById(R.id.boton_iniciarsesion);
-        inputCorreo = findViewById(R.id.input_correo);
-        inputContraseña = findViewById(R.id.input_contraseña);
+        botonIniciarSesion = findViewById(R.id.boton_empezar);
+        inputCorreo = findViewById(R.id.input_region);
+        inputContraseña = findViewById(R.id.input_rango);
 
         botonRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
