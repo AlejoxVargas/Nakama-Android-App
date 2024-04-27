@@ -154,14 +154,4 @@
         app:layout_constraintTop_toBottomOf="@+id/inicio_label4"
         app:layout_constraintVertical_bias="0.391" />
 
-
-    <TextView
-        android:id="@+id/textViewEdad"
-        android:layout_width="104dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="16dp"
-        android:text="18 años"
-        app:layout_constraintBaseline_toBottomOf="@id/inicio_boton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

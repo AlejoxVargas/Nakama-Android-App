@@ -54,10 +54,15 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
             //Aquí iría la actividad de contacto
             iniciarNuevaActividad(InicioActivity.class);
         }
+        else if (itemId== R.id.nav_logout) {
+            //Aquí iría la actividad de logout
+            iniciarNuevaActividad(InicioActivity.class);
+        }
     }
 
     private void iniciarNuevaActividad (Class<?> destinoactividad){
-        startActivity(new Intent(this, destinoactividad));
+        Intent intent = new Intent(this, destinoactividad);
+        startActivity(intent);
         overridePendingTransition(0,0);
     }
 }
