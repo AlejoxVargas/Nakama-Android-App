@@ -111,8 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="418dp"
         android:layout_marginEnd="54dp"
-        android:text="Aceptar términos y condiciones"
-        android:textMarginStart="16dp"
+        android:text="@string/aceptar_t_rminos_y_condiciones"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -135,7 +134,6 @@
         android:layout_marginTop="483dp"
         android:layout_marginEnd="109dp"
         android:text="Uso de datos personales"
-        android:textMarginStart="16dp"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
