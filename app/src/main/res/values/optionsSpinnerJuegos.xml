@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="juegos">
+        <item>Rocket League</item>
+        <item>Fortnite</item>
+        <item>Brawl Stars</item>
+        <item>Minecraft</item>
+        <item>Valorant</item>
+    </string-array>
+</resources>

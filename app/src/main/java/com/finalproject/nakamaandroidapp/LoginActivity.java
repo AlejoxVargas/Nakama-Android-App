@@ -2,7 +2,6 @@ package com.finalproject.nakamaandroidapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.text.TextUtils;
 
 import android.widget.Button;
@@ -46,8 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         inputPassword = findViewById(R.id.et_password);
         Button buttonSingUp = findViewById(R.id.btn_register);
         Button buttonLogin = findViewById(R.id.btn_login);
-
-        inputPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         buttonLogin.setOnClickListener(view -> loginUser());
 
