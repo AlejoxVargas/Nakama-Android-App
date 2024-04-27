@@ -5,4 +5,6 @@
     <color name="nakama_oscuro">#222539</color>
     <color name="nakama_tint">#2A2A43</color>
     <color name="nakama_highlight">#ED648D</color>
+    <color name="game_text_color">#FFD6EAF8</color>
+
 </resources>
