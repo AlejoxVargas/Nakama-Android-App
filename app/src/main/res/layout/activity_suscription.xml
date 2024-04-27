@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222539"
+    tools:context=".SuscriptionActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Planes:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/planGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Gold"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <RadioButton
+        android:id="@+id/planPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Premium"
+        app:layout_constraintTop_toBottomOf="@+id/planGold"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <RadioButton
+        android:id="@+id/planIlimitado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ilimitado"
+        app:layout_constraintTop_toBottomOf="@+id/planPremium"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <RadioButton
+        android:id="@+id/pagoTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tarjeta"
+        app:layout_constraintTop_toBottomOf="@+id/pagoBizum"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <RadioButton
+        android:id="@+id/pagoPayPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="PayPal"
+        app:layout_constraintTop_toBottomOf="@+id/pagoTarjeta"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <RadioButton
+        android:id="@+id/pagoBizum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Bizum"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <Button
+        android:id="@+id/btn_omitirSus"
+        android:layout_width="216dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/oval_button_background"
+        android:backgroundTint="#cec3c6"
+        android:text="Omitir"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_suscription"
+        android:layout_width="216dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/oval_button_background"
+        android:backgroundTint="#FA5C92"
+        android:text="Suscribirse"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_omitirSus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formas de pago:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="800px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_button_background"
+        android:backgroundTint="#2A2A43"
+        android:padding="20px"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.391" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
