@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/nakama_oscuro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_drawer_toolbar.ConfiguracionActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/label1_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/settings_preferencias" />
+
+                <Button
+                    android:id="@+id/button1_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_sonido"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button2_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_idioma"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <TextView
+                    android:id="@+id/label2_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/settings_Modo" />
+
+                <Button
+                    android:id="@+id/button3_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_claro"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button4_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_oscuro"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <TextView
+                    android:id="@+id/label3_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/settings_general" />
+
+                <Button
+                    android:id="@+id/button5_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_calificanos"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button6_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_ayuda"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <TextView
+                    android:id="@+id/label4_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="@string/settings_privacidad" />
+                <Button
+                    android:id="@+id/button7_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_cookies"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button8_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_p_privacidad"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button9_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_servicio"
+                    android:gravity="left"
+                    android:paddingTop="15dp"/>
+                <Button
+                    android:id="@+id/button10_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/nakama_highlight"
+                    android:text="@string/settings_volver"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

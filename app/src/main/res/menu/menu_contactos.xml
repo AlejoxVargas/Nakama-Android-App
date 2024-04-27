@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_contactos_notificaciones"
+        android:title="Notificaciones" />
+    <item
+        android:id="@+id/menu_contactos_estado"
+        android:title="Estado" />
+    <item
+        android:id="@+id/menu_contactos_bloqueados"
+        android:title="Bloqueados" />
+</menu>

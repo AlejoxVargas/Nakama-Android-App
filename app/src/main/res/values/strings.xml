@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">Nakama-Android-App</string>
-    <string name="username">username</string>
-    <string name="registrarse">Registrarse</string>
-    <string name="password">password</string>
-    <string name="email">email</string>
-    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="open_nav_drawer">Abrir</string>
+    <string name="close_nav_drawer">Cerrar</string>
+    <string name="inicio_boton">Emparejamiento</string>
+    <string name="inicio_region">Región</string>
+    <string name="inicio_juego">Juego</string>
+    <string name="inicio_edad">Edad</string>
+    <string name="inicio_rango">Rango/lv</string>
+    <string name="settings_preferencias">Preferencias de la APP</string>
+    <string name="settings_sonido">Sonido</string>
+    <string name="settings_idioma">Idioma</string>
+    <string name="settings_Modo">Modo oscuro</string>
+    <string name="settings_claro">Claro</string>
+    <string name="settings_oscuro">Oscuro</string>
+    <string name="settings_general">General</string>
+    <string name="settings_calificanos">Califícanos</string>
+    <string name="settings_ayuda">Ayuda</string>
+    <string name="settings_privacidad">Privacidad</string>
+    <string name="settings_cookies">Política de cookies</string>
+    <string name="settings_p_privacidad">Política de privacidad</string>
+    <string name="settings_servicio">Términos de servicio</string>
+    <string name="settings_volver">Volver a inicio</string>
 </resources>
