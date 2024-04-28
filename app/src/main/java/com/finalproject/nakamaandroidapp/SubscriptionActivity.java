@@ -1,6 +1,8 @@
 package com.finalproject.nakamaandroidapp;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SubscriptionActivity extends AppCompatActivity {
 
+    Spinner spinnerPagos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +23,9 @@ public class SubscriptionActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        spinnerPagos = (Spinner) findViewById(R.id.spinnerPagos);
+
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.pagos, android.R.layout.simple_spinner_dropdown_item);
+        spinnerPagos.setAdapter(adapter);
     }
 }
