@@ -24,7 +24,7 @@ public class InicioActivity extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityInicioBinding= activityInicioBinding.inflate(getLayoutInflater());
+        activityInicioBinding= ActivityInicioBinding.inflate(getLayoutInflater());
 
         setContentView(activityInicioBinding.getRoot());
 
