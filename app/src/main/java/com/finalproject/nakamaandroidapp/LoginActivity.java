@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            Intent intent = new Intent(getApplicationContext(), homePrueba.class); //TODO: Cambiar el LoginActivity.class por el de la home
+            Intent intent = new Intent(getApplicationContext(), InicioActivity.class); //TODO: Cambiar el LoginActivity.class por el de la home
             startActivity(intent);
             finish();
         }
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(LoginActivity.this, "Login Successful",
                                 Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, homePrueba.class); //TODO: Cambiar el LoginActivity.class por el de la home de Kimi
+                        Intent intent = new Intent(LoginActivity.this, InicioActivity.class); //TODO: Cambiar el LoginActivity.class por el de la home de Kimi
                         startActivity(intent);
                         finish();
                         Bundle bundle = new Bundle();

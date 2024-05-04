@@ -12,8 +12,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.finalproject.nakamaandroidapp.LoginActivity;
 import com.finalproject.nakamaandroidapp.R;
+import com.finalproject.nakamaandroidapp.homePrueba;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class DrawerBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
@@ -56,7 +59,10 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         }
         else if (itemId== R.id.nav_logout) {
             //Aquí iría la actividad de logout
-            iniciarNuevaActividad(InicioActivity.class);
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(DrawerBaseActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
