@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                         bundle.putString(FirebaseAnalytics.Param.METHOD, "EmailAndPassword");
                         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
                         bundle.putBoolean(FirebaseAnalytics.Param.SUCCESS, true);
-                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(RegisterActivity.this, SubscriptionActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
