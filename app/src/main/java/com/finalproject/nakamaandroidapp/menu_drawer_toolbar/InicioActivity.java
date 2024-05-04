@@ -19,7 +19,7 @@ public class InicioActivity extends DrawerBaseActivity {
     Spinner spinner1;
     Spinner spinner2;
     Spinner spinner3;
-    Slider slider1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,6 @@ public class InicioActivity extends DrawerBaseActivity {
         spinner1 = (Spinner) findViewById(R.id.inicio_spinner1);
         spinner2 = (Spinner) findViewById(R.id.inicio_spinner2);
         spinner3 = (Spinner) findViewById(R.id.spinner_rango);
-        slider1 = (Slider) findViewById(R.id.inicio_slider);
+
     }
 }

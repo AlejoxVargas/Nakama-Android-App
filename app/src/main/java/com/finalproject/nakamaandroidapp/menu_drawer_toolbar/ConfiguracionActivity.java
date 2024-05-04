@@ -12,6 +12,8 @@ import com.finalproject.nakamaandroidapp.R;
 
 public class ConfiguracionActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
