@@ -1,9 +1,8 @@
 package com.finalproject.nakamaandroidapp;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -14,33 +13,22 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CreateProfileActivity extends AppCompatActivity {
 
-    Spinner spinnerJuegos;
-    Button btnEmpezar;
+    Spinner spinnerGames;
+    Spinner spinnerRegion;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_create_profile);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
 
+        spinnerGames = (Spinner) findViewById(R.id.spinner_Juegos);
+        spinnerRegion = (Spinner) findViewById(R.id.spinner_Region);
 
-        });
+        ArrayAdapter<CharSequence> adapterRegion= ArrayAdapter.createFromResource(this, R.array.region, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapterGames= ArrayAdapter.createFromResource(this, R.array.games, android.R.layout.simple_spinner_item);
 
-        spinnerJuegos = (Spinner) findViewById(R.id.spinner_Juegos);
-
-        btnEmpezar = findViewById(R.id.boton_empezar);
-
-        btnEmpezar.setOnClickListener(v -> {
-            Intent intent = new Intent(this, homePrueba.class);
-            startActivity(intent);
-        });
-
-        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.juegos, android.R.layout.simple_spinner_item);
-        spinnerJuegos.setAdapter(adapter);
-
+        spinnerRegion.setAdapter(adapterRegion);
+        spinnerGames.setAdapter(adapterGames);
     }
 }
