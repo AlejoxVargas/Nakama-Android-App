@@ -1,5 +1,6 @@
 package com.finalproject.nakamaandroidapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -13,7 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class CreateProfileActivity extends AppCompatActivity {
 
     Spinner spinnerJuegos;
+    Spinner spinnerRegion;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,7 @@ public class CreateProfileActivity extends AppCompatActivity {
         });
 
         spinnerJuegos = (Spinner) findViewById(R.id.spinner_Juegos);
+        spinnerRegion = (Spinner) findViewById(R.id.spinner_Region);
 
         ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.juegos, android.R.layout.simple_spinner_item);
         spinnerJuegos.setAdapter(adapter);
