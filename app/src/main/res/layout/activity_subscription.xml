@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_omitirSus"
+        android:id="@+id/btn_omitir"
         android:layout_width="216dp"
         android:layout_height="55dp"
         android:layout_marginBottom="60dp"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_suscription"
+        android:id="@+id/btn_subscription"
         android:layout_width="216dp"
         android:layout_height="55dp"
         android:layout_marginBottom="25dp"
@@ -45,7 +45,7 @@
         android:backgroundTint="#FA5C92"
         android:text="Suscribirse"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_omitirSus"
+        app:layout_constraintBottom_toTopOf="@+id/btn_omitir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,13 +58,13 @@
         android:text="Formas de pago:"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintBottom_toTopOf="@+id/rg_metodo_pago"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinnerPagos"
+        android:id="@+id/sp_pagos"
         android:layout_width="800px"
         android:layout_height="37dp"
         android:layout_marginTop="27dp"
@@ -76,10 +76,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_planes" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rg_planes"
         android:layout_width="310dp"
         android:layout_height="136dp"
         android:layout_marginTop="12dp"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/planGold"
+            android:id="@+id/rbtn_plan_gold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
@@ -97,7 +97,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/planPremium"
+            android:id="@+id/rbt_plan_premium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
@@ -105,7 +105,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/planIlimitado"
+            android:id="@+id/rbtn_plan_ilimitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
@@ -114,7 +114,7 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/rg_metodo_pago"
         android:layout_width="306dp"
         android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,7 +124,7 @@
         app:layout_constraintVertical_bias="0.625">
 
         <RadioButton
-            android:id="@+id/pagoBizum"
+            android:id="@+id/rbtn_pago_bizum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
@@ -132,7 +132,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/pagoTarjeta"
+            android:id="@+id/rbtn_pago_tarjeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
@@ -140,12 +140,13 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/pagoPayPal"
+            android:id="@+id/rbtn_pago_paypal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
             android:text="PayPal"
             android:textSize="16sp" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
