@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="juegos">
+    <string-array name="games">
         <item>Rocket League</item>
         <item>Fortnite</item>
         <item>Brawl Stars</item>
