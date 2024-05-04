@@ -62,7 +62,7 @@
         android:text="@string/inicio_edad"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/inicio_slider"
+        app:layout_constraintBottom_toTopOf="@+id/inicio_input_edad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inicio_slider" />
+        app:layout_constraintTop_toBottomOf="@+id/inicio_input_edad" />
 
     <Spinner
         android:id="@+id/inicio_spinner1"
@@ -122,23 +122,22 @@
         app:layout_constraintVertical_bias="0.391" />
 
 
-    <com.google.android.material.slider.RangeSlider
-        android:id="@+id/inicio_slider"
+    <EditText
+        android:id="@+id/inicio_input_edad"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:value="18"
-        android:valueFrom="17"
-        android:valueTo="45"
+        android:hint="@string/inicio_hint"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/inicio_label4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inicio_label3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.391" />
 
     <Spinner
         android:id="@+id/spinner_rango"

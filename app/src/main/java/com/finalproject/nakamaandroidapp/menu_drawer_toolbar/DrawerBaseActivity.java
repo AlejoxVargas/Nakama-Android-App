@@ -61,8 +61,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
     }
 
     private void iniciarNuevaActividad (Class<?> destinoactividad){
-        Intent intent = new Intent(this, destinoactividad);
-        startActivity(intent);
+        startActivity(new Intent(this, destinoactividad));
         overridePendingTransition(0,0);
     }
 }
