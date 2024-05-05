@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="pagos">
-        <item>Mensual</item>
-        <item>Trimestral</item>
-        <item>Anual</item>
-    </string-array>
-
-    <string-array name="juegos">
+    <string-array name="games">
+>>>>>>>> feature/create_profile:app/src/main/res/values/optionsSpinnerGames.xml
         <item>Rocket League</item>
         <item>Fortnite</item>
         <item>Brawl Stars</item>
