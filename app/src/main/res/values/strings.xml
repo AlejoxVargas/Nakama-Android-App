@@ -28,4 +28,5 @@
     <string name="settings_volver">Volver a inicio</string>
     <string name="aceptar_t_rminos_y_condiciones">Aceptar términos y condiciones</string>
     <string name="inicio_hint">Edad de la búsqueda</string>
+    <string name="matches_nombre">Nombre: </string>
 </resources>

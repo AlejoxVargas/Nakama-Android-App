@@ -3,6 +3,7 @@ package com.finalproject.nakamaandroidapp.menu_drawer_toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,19 +16,16 @@ import androidx.annotation.NonNull;
 
 import com.finalproject.nakamaandroidapp.R;
 import com.finalproject.nakamaandroidapp.databinding.ActivityInicioBinding;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class InicioActivity extends DrawerBaseActivity {
     ActivityInicioBinding activityInicioBinding;
-    private DatabaseReference rootDatabaseRef;
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     Button boton1;
     TextView label1;
     TextView label2;
@@ -49,8 +47,6 @@ public class InicioActivity extends DrawerBaseActivity {
 
         setContentView(activityInicioBinding.getRoot());
 
-        rootDatabaseRef = FirebaseDatabase.getInstance().getReference().child("nodobbdd");
-
         boton1 = (Button) findViewById(R.id.inicio_boton);
         label1 = (TextView) findViewById(R.id.inicio_label1);
         label2 = (TextView) findViewById(R.id.inicio_label2);
@@ -61,7 +57,7 @@ public class InicioActivity extends DrawerBaseActivity {
         spinner3 = (Spinner) findViewById(R.id.spinner_rango);
         texto1 = (EditText) findViewById(R.id.inicio_input_edad);
         regiones = new String[]{"Norteamérica",
-                "Europa del Oeste",
+                "Europa",
                 "Europa Nórdica y del Este",
                 "Oceanía",
                 "Rusia",
@@ -75,7 +71,7 @@ public class InicioActivity extends DrawerBaseActivity {
                 "Minecraft",
                 "Valorant",
                 "Brawl Stars"};
-        rangos = new String[]{"Bajo",
+        rangos = new String[]{"nivel 2",
                 "Medio",
                 "Alto",
                 "Muy alto"};
@@ -102,7 +98,7 @@ public class InicioActivity extends DrawerBaseActivity {
             public void onClick(View v) {
 
                 buscarMatches();
-                //cambio de actividad al recycleView (matchesActivity)
+
             }
         });
 
@@ -112,43 +108,37 @@ public class InicioActivity extends DrawerBaseActivity {
         String valorSpinnerRegiones = spinner1.getSelectedItem().toString();
         String valorSpinnerJuegos = spinner2.getSelectedItem().toString();
         String valorSpinnerRango = spinner3.getSelectedItem().toString();
-        String valorEditText = texto1.getText().toString().trim();
 
-        if (valorSpinnerRegiones.isEmpty() || valorSpinnerJuegos.isEmpty() || valorSpinnerRango.isEmpty() || valorEditText.isEmpty()) {
+        if (valorSpinnerRegiones.isEmpty() || valorSpinnerJuegos.isEmpty()) {
             Toast.makeText(InicioActivity.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Query query = rootDatabaseRef.orderByChild("region").equalTo(valorSpinnerRegiones)
-                .orderByChild("juegos").equalTo(valorSpinnerJuegos)
-                .orderByChild("rango").equalTo(valorSpinnerRango)
-                .orderByChild("Edad").equalTo(Integer.parseInt(valorEditText));
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // Lista para almacenar objetos Usuario
+        // Create a reference to the "usuarios" collection
+        CollectionReference usuariosRef = db.collection("profiles");
+
+        // Construct a query to find matching users
+        Query query = usuariosRef
+                .whereEqualTo("region", valorSpinnerRegiones)
+                .whereEqualTo("favorite_game", valorSpinnerJuegos)
+                .whereEqualTo("category", valorSpinnerRango);
+
+        query.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
                 List<Usuario> usuarios = new ArrayList<>();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    // Extrae los datos del usuario de cada nodo
-                    String idUsuario = snapshot.getKey(); // Obtiene el ID del usuario (clave del nodo)
-                    String nombreUsuario = snapshot.child("nombre").getValue(String.class); // Obtiene el nombre del usuario
-                    Usuario usuario = new Usuario(idUsuario, nombreUsuario); // Crea un objeto Usuario
-                    usuarios.add(usuario); // Agrega el usuario a la lista
+                for (com.google.firebase.firestore.DocumentSnapshot document : task.getResult().getDocuments()) {
+                    Usuario usuario = document.toObject(Usuario.class);
+                    usuarios.add(usuario);
                 }
 
-                //Pasa la lista de usuarios a la siguiente actividad
+                // Pass the list of matching users to the next activity
                 Intent intent = new Intent(InicioActivity.this, MatchesActivity.class);
                 intent.putParcelableArrayListExtra("usuarios", (ArrayList<Usuario>) usuarios);
                 startActivity(intent);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Maneja el fallo de la consulta
-                Toast.makeText(InicioActivity.this, "Error al buscar entradas: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            } else {
+                Log.d("InicioActivity", "Error fetching matches: ", task.getException());
+                Toast.makeText(InicioActivity.this, "Error al buscar coincidencias", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 }
